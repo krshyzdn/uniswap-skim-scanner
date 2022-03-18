@@ -23,5 +23,4 @@ npx hardhat --network xdai scan-pairs
 
 - [ ] Improve speed by using multicall to fetch data from multiple pairs at the same time
 - [ ] Add contract and scripts for executing any outstanding skim opportunities
-- [ ] Support Avalanche by deploying the multicall contract
 - [ ] Investigate flakiness and wrong results
