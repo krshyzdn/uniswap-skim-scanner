@@ -25,19 +25,16 @@ const config: HardhatUserConfig = {
   },
   networks: {
     mainnet: {
-      url: `https://mainnet.infura.io/v3/${process.env.INFURA_PROJECT_ID}`,
-    },
-    avax: {
-      url: "https://api.avax.network/ext/bc/C/rpc",
+      url: process.env.MAINNET_RPC,
     },
     bsc: {
-      url: "https://bsc-dataseed.binance.org/",
+      url: process.env.BSC_RPC,
     },
     polygon: {
-      url: "https://rpc-mainnet.maticvigil.com/",
+      url: process.env.POLYGON_RPC,
     },
     xdai: {
-      url: "https://rpc.xdaichain.com/",
+      url: process.env.XDAI_RPC,
     },
   },
   uniswapSkimScanner: {
@@ -45,12 +42,6 @@ const config: HardhatUserConfig = {
       multicallAddress: "0xeefba1e63905ef1d7acba5a8513c70307c1ce441",
       uniswapClones: {
         uniswap: "0x5C69bEe701ef814a2B6a3EDD4B1652CB9cc5aA6f",
-      },
-    },
-    avax: {
-      multicallAddress: "",
-      uniswapClones: {
-        pangolin: "0xefa94DE7a4656D787667C749f7E1223D71E9FD88",
       },
     },
     bsc: {
